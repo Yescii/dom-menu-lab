@@ -26,3 +26,21 @@ topMenuEl.style.backgroundColor = "var(--top-menu-bg)";
 topMenuEl.classList= "flex-around";
 
 
+
+// Menu data structure
+var menuLinks = [
+    {text: 'about', href: '/about'},
+    {text: 'catalog', href: '/catalog'},
+    {text: 'orders', href: '/orders'},
+    {text: 'account', href: '/account'},
+  ];
+
+  //added links to the nav element, links added content from the menu data structure porperties of text and href.
+  
+  menuLinks.forEach((link) => {
+    a = document.createElement("a");
+      a.innerHTML= link.text;
+      a.setAttribute("href", link.href)
+      topMenuEl.appendChild(a);
+
+  });
