@@ -1,6 +1,6 @@
 /* MY NOTES
 
- "ERROR is not a function", means it uses an equal sign
+ "is not a function" error, means it uses an equal sign, not '( )'
 
 */
 
@@ -36,7 +36,7 @@ var menuLinks = [
   ];
 
   //added links to the nav element, links added content from the menu data structure porperties of text and href.
-  
+
   menuLinks.forEach((link) => {
     a = document.createElement("a");
       a.innerHTML= link.text;
@@ -44,3 +44,10 @@ var menuLinks = [
       topMenuEl.appendChild(a);
 
   });
+
+
+//Part 2 of lab
+ const subMenuEl = document.getElementById('sub-menu');
+ subMenuEl.style.height = '100%';
+ subMenuEl.style.backgroundColor = 'var(--sub-menu-bg)'
+subMenuEl.classList= 'flex-around';
